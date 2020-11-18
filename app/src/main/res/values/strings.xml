@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">taller_listview</string>
     <string name="seleccione">Seleccione una opción</string>
+    <string name="areas">AREAS</string>
+    <string name="volumenes">VOLUMENES</string>
+    <string name="id">N°</string>
+    <string name="operacion">Operación</string>
+    <string name="datos">Datos</string>
+    <string name="resultado">Resultado</string>
+    <string name="operaciones_realizadas">Operaciones realizadas</string>
 </resources>
