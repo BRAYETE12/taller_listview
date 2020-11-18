@@ -30,7 +30,6 @@
             android:id="@+id/label1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
             android:textSize="18sp" />
 
         <EditText
@@ -42,7 +41,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/gruup2"
+        android:id="@+id/group2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -53,11 +52,10 @@
             android:id="@+id/label2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/input"
+            android:id="@+id/input2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -75,14 +73,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button" />
+            android:onClick="calcular"
+            android:text="@string/calcular" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button" />
+            android:onClick="limpiar"
+            android:text="@string/limpiar" />
     </LinearLayout>
 
     <TextView
@@ -90,7 +90,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="30dp"
-        android:text="TextView"
         android:textAlignment="center"
         android:textSize="24sp" />
 

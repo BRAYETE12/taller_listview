@@ -9,7 +9,7 @@
     android:paddingTop="22dp"
     android:paddingRight="22dp"
     android:paddingBottom="22dp"
-    tools:context=".ListarPersonas">
+    tools:context=".HistorialActivity">
 
     <TextView
         android:id="@+id/textView7"

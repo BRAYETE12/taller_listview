@@ -11,14 +11,13 @@ android:paddingRight="15dp"
 android:paddingBottom="22dp"
 tools:context=".OperacionActivity" >
 
-<TextView
-    android:id="@+id/titulo"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="22dp"
-    android:text="@string/areas"
-    android:textAlignment="center"
-    android:textSize="24sp" />
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:textAlignment="center"
+        android:textSize="24sp" />
 
 <ListView
     android:id="@+id/opciones"

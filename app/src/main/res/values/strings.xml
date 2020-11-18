@@ -8,4 +8,39 @@
     <string name="datos">Datos</string>
     <string name="resultado">Resultado</string>
     <string name="operaciones_realizadas">Operaciones realizadas</string>
+    <string name="error_numero">Campo requerido</string>
+
+    <string name="cuadrado">CUADRADO</string>
+    <string name="rectangulo">RECTÁNGULO</string>
+    <string name="triangulo">TRIÁNGULO</string>
+    <string name="circulo">CÍRCULO</string>
+
+    <string name="esfera">ESFERA</string>
+    <string name="cilindro">CILINDRO</string>
+    <string name="cono">CONO</string>
+    <string name="cubo">CUBO</string>
+    <string name="calcular">Calcular</string>
+    <string name="limpiar">Limpiar</string>
+
+    <array name="opciones">
+        <item>@string/areas</item>
+        <item>@string/volumenes</item>
+        <item>@string/operaciones_realizadas</item>
+    </array>
+
+    <array name="opciones_areas">
+        <item>@string/cuadrado</item>
+        <item>@string/rectangulo</item>
+        <item>@string/triangulo</item>
+        <item>@string/circulo</item>
+    </array>
+
+    <array name="opciones_volumenes">
+        <item>@string/esfera</item>
+        <item>@string/cilindro</item>
+        <item>@string/cono</item>
+        <item>@string/cubo</item>
+    </array>
+
+
 </resources>
