@@ -12,6 +12,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.taller_listview.models.Historial;
+
 public class CalcularAVActivity extends AppCompatActivity {
 
     private int TIPO_OPERACION = 0;
@@ -100,6 +102,9 @@ public class CalcularAVActivity extends AppCompatActivity {
 
         if(!this.validar()){ return; }
 
+        String op = "";
+        String dt = "";
+
         double r = 0, n1 = 0, n2 = 0;
         n1 = Double.parseDouble(this.input1.getText().toString());
 
@@ -112,15 +117,23 @@ public class CalcularAVActivity extends AppCompatActivity {
             switch (this.OPERACION){
                 case 0:
                     r = n1 * n1;
+                    op = getString(R.string.areas) + " " + getString(R.string.cuadrado);
+                    dt =  "L: " + n1;
                     break;
                 case 1:
                     r = n1 * n2;
+                    op = getString(R.string.areas) + " " + getString(R.string.rectangulo);
+                    dt =  "L: " + n1 + " / A: " + n2;
                     break;
                 case 2:
                     r = (n1 * n2) / 2;
+                    op = getString(R.string.areas) + " " + getString(R.string.triangulo);
+                    dt =  "B: " + n1 + " / A: " + n2;
                     break;
                 case 3:
                     r = n1 * n1 * pi;
+                    op = getString(R.string.areas) + " " + getString(R.string.circulo);
+                    dt =  "R: " + n1;
                     break;
             }
         }
@@ -128,21 +141,32 @@ public class CalcularAVActivity extends AppCompatActivity {
             switch (this.OPERACION){
                 case 0:
                     r =  (3/4) * n1 * n1 * n1 * pi;
+                    op = getString(R.string.volumenes) + " " + getString(R.string.esfera);
+                    dt =  "R: " + n1;
                     break;
                 case 1:
                     r =  n1 * n2 * n2 * pi;
+                    op = getString(R.string.volumenes) + " " + getString(R.string.cilindro);
+                    dt =  "A: " + n1 + " / R: " + n2;
                     break;
                 case 2:
                     r = (1/3) * n1 * n2 * n2 * pi;
+                    op = getString(R.string.volumenes) + " " + getString(R.string.cono);
+                    dt =  "A: " + n1 + " / R: " + n2;
                     break;
                 case 3:
                     r = n1 * n1 * n1;
+                    op = getString(R.string.volumenes) + " " + getString(R.string.cubo);
+                    dt =  "L: " + n1;
                     break;
             }
 
         }
 
         this.respuesta.setText( String.format("%.2f", r) );
+
+        Historial h = new Historial(op, dt, String.format("%.2f", r));
+        h.guardar();
     }
 
     public void limpiar(View v){
