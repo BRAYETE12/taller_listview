@@ -2,11 +2,8 @@ package com.example.taller_listview;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -106,12 +103,13 @@ public class CalcularAVActivity extends AppCompatActivity {
         String dt = "";
 
         double r = 0, n1 = 0, n2 = 0;
+        double v_1_3 = 0.33;
+        double v_4_3 = 1.33;
         n1 = Double.parseDouble(this.input1.getText().toString());
 
         if(this.group2.getVisibility() == View.VISIBLE){
             n2 = Double.parseDouble(this.input2.getText().toString());
         }
-
 
         if(this.TIPO_OPERACION==1){
             switch (this.OPERACION){
@@ -139,7 +137,7 @@ public class CalcularAVActivity extends AppCompatActivity {
         else if(this.TIPO_OPERACION==2){
             switch (this.OPERACION){
                 case 0:
-                    r =  (4/3) * n1 * n1 * n1 * pi;
+                    r =  v_4_3 * n1 * n1 * n1 * pi;
                     dt =  "R: " + n1;
                     break;
                 case 1:
@@ -147,7 +145,7 @@ public class CalcularAVActivity extends AppCompatActivity {
                     dt =  "A: " + n1 + " / R: " + n2;
                     break;
                 case 2:
-                    r =  (1/3) * n1 * n2 * n2 * pi;
+                    r =  (n1 * n2 * n2) * pi * v_1_3;
                     dt =  "A: " + n1 + " / R: " + n2;
                     break;
                 case 3:
@@ -160,7 +158,7 @@ public class CalcularAVActivity extends AppCompatActivity {
 
         }
 
-        this.respuesta.setText( String.format("%.2f", r) );
+        this.respuesta.setText( op +": "+ String.format("%.2f", r) );
 
         Historial h = new Historial(op, dt, String.format("%.2f", r));
         h.guardar();
