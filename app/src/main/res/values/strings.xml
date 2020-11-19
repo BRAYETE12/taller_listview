@@ -1,14 +1,18 @@
 <resources>
     <string name="app_name">taller_listview</string>
     <string name="seleccione">Seleccione una opción</string>
-    <string name="areas">AREAS</string>
-    <string name="volumenes">VOLUMENES</string>
+    <string name="areas">ÁREA</string>
+    <string name="volumenes">VOLUMEN</string>
     <string name="id">N°</string>
     <string name="operacion">Operación</string>
     <string name="datos">Datos</string>
     <string name="resultado">Resultado</string>
-    <string name="operaciones_realizadas">Operaciones realizadas</string>
+    <string name="operaciones_realizadas">OPERACIONESS REALIZADAS</string>
     <string name="error_numero">Campo requerido</string>
+    <string name="valor_lado">Valor del lado</string>
+    <string name="valor_radio">Valor del radio</string>
+    <string name="valor_altura">Valor de la altura</string>
+    <string name="valor_base">Valor de la base</string>
 
     <string name="cuadrado">CUADRADO</string>
     <string name="rectangulo">RECTÁNGULO</string>

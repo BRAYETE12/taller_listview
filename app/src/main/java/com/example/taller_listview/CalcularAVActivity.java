@@ -47,24 +47,24 @@ public class CalcularAVActivity extends AppCompatActivity {
                 case 0:
                         this.titulo.setText( R.string.cuadrado );
                         this.group2.setVisibility(View.GONE);
-                        this.label1.setText("Valor del lado");
+                        this.label1.setText(R.string.valor_lado);
                     break;
                 case 1:
                         this.titulo.setText( R.string.rectangulo );
                         this.group2.setVisibility(View.VISIBLE);
-                        this.label1.setText("Valor de base");
-                        this.label2.setText("Valor del altura");
+                        this.label1.setText(R.string.valor_base);
+                        this.label2.setText(R.string.valor_altura);
                     break;
                 case 2:
                         this.titulo.setText( R.string.triangulo );
                         this.group2.setVisibility(View.VISIBLE);
-                        this.label1.setText("Valor de base");
-                        this.label2.setText("Valor del altura");
+                        this.label1.setText(R.string.valor_base);
+                        this.label2.setText(R.string.valor_altura);
                     break;
                 case 3:
                         this.titulo.setText( R.string.circulo );
                         this.group2.setVisibility(View.GONE);
-                        this.label1.setText("Valor del radio");
+                        this.label1.setText(R.string.valor_radio);
                     break;
             }
         }
@@ -73,24 +73,24 @@ public class CalcularAVActivity extends AppCompatActivity {
                 case 0:
                         this.titulo.setText( R.string.esfera );
                         this.group2.setVisibility(View.GONE);
-                        this.label1.setText("Valor del radio");
+                        this.label1.setText(R.string.valor_radio);
                     break;
                 case 1:
                         this.titulo.setText( R.string.cilindro );
                         this.group2.setVisibility(View.VISIBLE);
-                        this.label1.setText("Valor de la altura");
-                        this.label2.setText("Valor del radio");
+                        this.label1.setText(R.string.valor_altura);
+                        this.label2.setText(R.string.valor_radio);
                     break;
                 case 2:
                         this.titulo.setText( R.string.cono );
                         this.group2.setVisibility(View.VISIBLE);
-                        this.label1.setText("Valor de la altura");
-                        this.label2.setText("Valor del radio");
+                        this.label1.setText(R.string.valor_altura);
+                        this.label2.setText(R.string.valor_radio);
                     break;
                 case 3:
                         this.titulo.setText( R.string.cubo );
                         this.group2.setVisibility(View.GONE);
-                        this.label1.setText("Valor del lado");
+                        this.label1.setText(R.string.valor_lado);
                     break;
             }
 
@@ -117,49 +117,46 @@ public class CalcularAVActivity extends AppCompatActivity {
             switch (this.OPERACION){
                 case 0:
                     r = n1 * n1;
-                    op = getString(R.string.areas) + " " + getString(R.string.cuadrado);
                     dt =  "L: " + n1;
                     break;
                 case 1:
                     r = n1 * n2;
-                    op = getString(R.string.areas) + " " + getString(R.string.rectangulo);
                     dt =  "L: " + n1 + " / A: " + n2;
                     break;
                 case 2:
                     r = (n1 * n2) / 2;
-                    op = getString(R.string.areas) + " " + getString(R.string.triangulo);
                     dt =  "B: " + n1 + " / A: " + n2;
                     break;
                 case 3:
                     r = n1 * n1 * pi;
-                    op = getString(R.string.areas) + " " + getString(R.string.circulo);
                     dt =  "R: " + n1;
                     break;
             }
+
+            op = getString(R.string.areas) +" "+ this.titulo.getText();
+
         }
         else if(this.TIPO_OPERACION==2){
             switch (this.OPERACION){
                 case 0:
-                    r =  (3/4) * n1 * n1 * n1 * pi;
-                    op = getString(R.string.volumenes) + " " + getString(R.string.esfera);
+                    r =  (4/3) * n1 * n1 * n1 * pi;
                     dt =  "R: " + n1;
                     break;
                 case 1:
                     r =  n1 * n2 * n2 * pi;
-                    op = getString(R.string.volumenes) + " " + getString(R.string.cilindro);
                     dt =  "A: " + n1 + " / R: " + n2;
                     break;
                 case 2:
-                    r = (1/3) * n1 * n2 * n2 * pi;
-                    op = getString(R.string.volumenes) + " " + getString(R.string.cono);
+                    r =  (1/3) * n1 * n2 * n2 * pi;
                     dt =  "A: " + n1 + " / R: " + n2;
                     break;
                 case 3:
                     r = n1 * n1 * n1;
-                    op = getString(R.string.volumenes) + " " + getString(R.string.cubo);
                     dt =  "L: " + n1;
                     break;
             }
+
+            op = getString(R.string.volumenes) +" "+ this.titulo.getText();
 
         }
 
